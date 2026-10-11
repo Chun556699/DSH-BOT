@@ -34,7 +34,7 @@
     "@opentelemetry/sdk-logs": "^0.222.0",
     "@opentelemetry/core": "2.11.0",
     "@opentelemetry/otlp-transformer": "^0.222.0",
-    "got": "^14.6.6"
+    "got": "^16.0.0"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "workspace:~",
