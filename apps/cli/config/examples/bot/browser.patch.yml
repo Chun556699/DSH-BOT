@@ -1,0 +1,23 @@
+# Optional browser overlay for the DeepSeek Bot composition; apply after
+# bot.patch.yml:
+#
+#   pnpm run start:bot -- --patch apps/cli/config/examples/bot/browser.patch.yml
+#
+# Mounts the experimental Playwright MCP provider with one persistent Chromium
+# profile directory per Session under $DSH_HOME/bot-browser — cookies and site
+# storage survive across sessions; individual tabs do not restore. Browser
+# processes launch lazily per Session, headless by default; opening the app
+# starts no browser. Every browser tool call still passes the bot-policy
+# one-time approval gate (the `mcp__playwright-mcp__` prefix is in its default
+# browserToolPrefixes).
+
+- insert:
+    - id: browser-use
+      name: '@deepseek-ai/dsh-browser-use'
+
+    - id: browser-use-playwright-mcp
+      name: '@deepseek-ai/dsh-browser-use-playwright-mcp'
+      config:
+        mode: launch
+        headless: true
+        userDataRoot: !!js dshHomePath('bot-browser')

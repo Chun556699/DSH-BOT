@@ -1,0 +1,43 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/interaction/bot-policy/README.md
+/:
+  en: 20f0e3614fac880e
+  zh: 401453cea5af4dec
+/deepseek-ai-dsh-bot-policy:
+  en: 0b4ff60884bf4461
+  zh: 5b4b5fcc7c6ca48f
+/deepseek-ai-dsh-bot-policy/summary:
+  en: 368e19e28295a8a0
+  zh: 5ef706baae5a4a79
+/deepseek-ai-dsh-bot-policy/table-of-contents:
+  en: b563e4ec4727d0de
+  zh: 390e33020e4e5a7d
+/deepseek-ai-dsh-bot-policy/use-this-package:
+  en: 034d106a0fcf15bb
+  zh: 7772e0db76272b54
+/deepseek-ai-dsh-bot-policy/use-this-package/when-to-choose-it:
+  en: 9b0aa2e4207b8e16
+  zh: 10e9a0e1b45f92da
+/deepseek-ai-dsh-bot-policy/understand-the-implementation:
+  en: 1dfca9b8264274f2
+  zh: 46f639b80749a505
+/deepseek-ai-dsh-bot-policy/understand-the-implementation/source-map:
+  en: 465373116edae1ab
+  zh: 5f6ad193336adc5f
+/deepseek-ai-dsh-bot-policy/further-exploration:
+  en: 4ba97522899936bf
+  zh: d879b42b1084d028
+/deepseek-ai-dsh-bot-policy/model-experience:
+  en: ae6436eb6eb738c3
+  zh: 37da41959bb3f25a
+/deepseek-ai-dsh-bot-policy/model-experience/kv-cache-effect:
+  en: 51b2e86a10d6669a
+  zh: de47d36b68fd5e72
+/deepseek-ai-dsh-bot-policy/known-limitations-and-deferred-work:
+  en: a82c2390b4635068
+  zh: 1f903c79a98c3d93
+/deepseek-ai-dsh-bot-policy/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: e88aeb617ffb74ea

@@ -1,0 +1,48 @@
+# Optional SSH overlay for the DeepSeek Bot composition; apply after
+# bot.patch.yml:
+#
+#   pnpm run start:bot -- --patch apps/cli/config/examples/bot/ssh.patch.yml
+#
+# Replaces the local filesystem, subprocess, and sandbox providers with the
+# existing SSH providers, so agent shell, file, and confinement operations run
+# on the configured remote host. There is no local fallback: disabling a local
+# row without a working remote fails the composition rather than silently
+# degrading.
+#
+# POSIX only — both the client host and the remote must be POSIX. On Windows
+# this overlay fails at boot; develop the UI without it.
+#
+# Required environment (all four; a missing value fails the launch loudly):
+#   DSB_SSH_HOST          OpenSSH host alias (user, key, known_hosts already configured)
+#   DSB_SSH_HELPER        Absolute local path of the installed bundled helper
+#   DSB_SSH_HELPER_HASH   SHA-256 of that helper file (mismatches refuse the connection)
+#   DSB_SSH_WORKSPACE     Absolute remote default workspace directory
+
+- id: fs-sandbox
+  disabled: true
+
+- id: subprocess
+  disabled: true
+
+- id: sandbox
+  disabled: true
+
+- insert:
+    - id: ssh
+      name: '@deepseek-ai/dsh-ssh'
+      config:
+        host: !!js (() => { const v = process.env.DSB_SSH_HOST; if (!v) throw new Error('bot ssh.patch.yml requires DSB_SSH_HOST'); return v })()
+        helper: !!js (() => { const v = process.env.DSB_SSH_HELPER; if (!v) throw new Error('bot ssh.patch.yml requires DSB_SSH_HELPER'); return v })()
+        helperHash: !!js (() => { const v = process.env.DSB_SSH_HELPER_HASH; if (!v) throw new Error('bot ssh.patch.yml requires DSB_SSH_HELPER_HASH'); return v })()
+        workspace: !!js (() => { const v = process.env.DSB_SSH_WORKSPACE; if (!v) throw new Error('bot ssh.patch.yml requires DSB_SSH_WORKSPACE'); return v })()
+        launch:
+          kind: executable
+
+    - id: fs-ssh
+      name: '@deepseek-ai/dsh-fs-ssh'
+
+    - id: subprocess-ssh
+      name: '@deepseek-ai/dsh-subprocess-ssh'
+
+    - id: sandbox-ssh
+      name: '@deepseek-ai/dsh-sandbox-ssh'

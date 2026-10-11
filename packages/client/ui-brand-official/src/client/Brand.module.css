@@ -1,0 +1,10 @@
+/* Text brand name rendered into sidebar.brand.name for the Bot product. */
+
+.botName {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  color: var(--dsw-alias-label-primary);
+}

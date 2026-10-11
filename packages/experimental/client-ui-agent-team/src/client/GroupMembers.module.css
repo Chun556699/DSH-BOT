@@ -1,0 +1,192 @@
+/* Header roster: overlapping avatars ringed in the header background. */
+.stack {
+  display: inline-flex;
+  align-items: center;
+}
+
+.stackAvatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px var(--dsw-alias-bg-base);
+}
+
+.stackAvatar + .stackAvatar {
+  margin-left: -6px;
+}
+
+/* Pinned aside roster. */
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 4px 0;
+  color: var(--dsw-alias-label-primary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.count {
+  color: var(--dsw-alias-label-caption);
+  font-size: 12px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.member:disabled {
+  cursor: default;
+}
+
+.member:not(:disabled):hover,
+.member:not(:disabled):focus-visible {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.avatarSeat {
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 32px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+}
+
+/* The live-status dot sits on the avatar's lower-right corner, ringed so it
+   stays legible over any avatar tint. */
+.statusDot {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--dsw-alias-bg-base);
+}
+
+.memberText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.memberName {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  font-size: 13px;
+}
+
+.memberNameText,
+.memberStatus,
+.diagnostic {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.roleTag {
+  flex: none;
+  padding: 0 4px;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.memberStatus {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 11px;
+}
+
+.diagnostic,
+.alert {
+  color: var(--dsw-alias-state-error-primary);
+  font-size: 11px;
+}
+
+.notice,
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.notice {
+  color: var(--dsw-alias-label-tertiary);
+}
+
+/* Blank-chat member setup, centered under the hero headline. */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: min(360px, 100%);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 160px;
+  padding: 3px 10px 3px 4px;
+  border-radius: 999px;
+  background: var(--dsw-alias-bg-layer-2);
+  box-shadow: inset 0 0 0 1px var(--dsw-alias-border-l2);
+  color: var(--dsw-alias-label-primary);
+  font-size: 12px;
+}
+
+.chipAvatar {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.chipName {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+# Bilingual-pair consistency record for 2026-10-11-permanent-session-deletion.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-10-11-permanent-session-deletion.md
+/agent-note-permanent-session-deletion:
+  en: 2a82d3dea1124bd6
+  zh: 494947aacc7e686b
+/agent-note-permanent-session-deletion/problem:
+  en: 8350165828935bc3
+  zh: a8c8f7e4e3a7217b
+/agent-note-permanent-session-deletion/decision:
+  en: 3376008968f7b12c
+  zh: acc7eb2f557cbeba
+/agent-note-permanent-session-deletion/alternatives-considered:
+  en: 4ea46a120ca4553b
+  zh: bc399c5c5b0f6dee
+/agent-note-permanent-session-deletion/consequences:
+  en: 2212102a8fbec240
+  zh: d220acbe725ca175

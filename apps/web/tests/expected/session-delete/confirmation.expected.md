@@ -1,0 +1,6 @@
+- dialog "Permanently delete this session?":
+  - heading "Permanently delete this session?" [level=2]
+  - button "Close"
+  - paragraph: This permanently deletes “Delete this conversation”, its history, and local files in its session storage directory. This cannot be undone. Workspace files, shared attachments, and other sessions are kept. Stop this session’s tasks first.
+  - button "Cancel"
+  - button "Delete session"

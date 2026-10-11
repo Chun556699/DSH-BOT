@@ -1,0 +1,63 @@
+/* Group-chat chrome: bots speak on the left under an avatar-and-name header,
+   while the human's own messages keep the right-aligned user bubble. */
+
+.speaker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  height: calc(28px + var(--dsh-content-font-delta, 0px));
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--dsw-alias-label-primary);
+  font-size: var(--dsh-content-font-size-secondary, 13px);
+  font-weight: 600;
+  line-height: calc(18px + var(--dsh-content-font-delta-secondary, 0px));
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time {
+  flex: none;
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 12px;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.relay {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* A bot's chat bubble: shrink-wraps short replies, caps at the column, and
+   squares the corner nearest its speaker header. */
+.bubble {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: flex-start;
+  min-width: 0;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 0.5px solid var(--dsw-alias-border-l2);
+  border-radius: var(--dsw-radius-xl);
+  border-start-start-radius: var(--dsw-radius-xs);
+  background: var(--dsw-alias-bg-layer-1);
+  color: var(--dsw-alias-label-primary);
+  font-size: var(--dsh-content-font-size, 14px);
+  line-height: calc(24px + var(--dsh-content-font-delta, 0px));
+  overflow-wrap: anywhere;
+}

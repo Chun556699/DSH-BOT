@@ -1,0 +1,36 @@
+/* Bot workbench chrome — opt-in; default hero styles live in
+   ConversationRoot.module.css and stay untouched while the flag is off. */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.brand {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.headline {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  color: var(--dsw-alias-label-primary);
+}
+
+.composerHint {
+  width: min(512px, calc(100% - 2 * var(--dsh-composer-side-clearance)));
+  align-self: center;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--dsw-alias-label-caption);
+}

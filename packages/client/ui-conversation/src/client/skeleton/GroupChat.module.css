@@ -1,0 +1,57 @@
+/* Group-chat chrome; shown only for the Lead view of a group-chat Session. */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  background: var(--dsw-specific-bubble);
+  color: var(--dsw-alias-label-primary);
+}
+
+.headline {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  color: var(--dsw-alias-label-primary);
+}
+
+.subtitle {
+  max-width: 440px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* The slot anchor is always present; an empty seat takes no space. */
+.members:has(> [data-slot]:empty) {
+  display: none;
+}
+
+.composerHint {
+  width: min(512px, calc(100% - 2 * var(--dsh-composer-side-clearance)));
+  align-self: center;
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--dsw-alias-label-caption);
+}

@@ -1,0 +1,37 @@
+# Bilingual-pair consistency record for deepseek-bot.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/user/deepseek-bot.md
+/deepseek-bot:
+  en: d095915d5d34305b
+  zh: 61ac9a3487032cb5
+/deepseek-bot/prerequisites:
+  en: b2abd32b32aa5197
+  zh: 9cd8f3ffae3e6a96
+/deepseek-bot/start:
+  en: bfc8a093b46f07ef
+  zh: 07047795d6a62240
+/deepseek-bot/desktop:
+  en: cded539355fe8d0f
+  zh: af5e9257a795b813
+/deepseek-bot/what-the-bot-does:
+  en: 64765ce4c3f27fa6
+  zh: aec7ffdc52f76905
+/deepseek-bot/group-chats-and-the-master-bot:
+  en: 5c488be4b1bf258f
+  zh: 2c889e5e97eaaf33
+/deepseek-bot/optional-overlays:
+  en: 3480dec5ee73041f
+  zh: dec8dd1e5e797118
+/deepseek-bot/optional-overlays/persistent-browser-browser-patch-yml:
+  en: 25afa19abb3d1b67
+  zh: 6518d7c894bdc413
+/deepseek-bot/optional-overlays/ssh-providers-ssh-patch-yml:
+  en: e6f24a0422598fe4
+  zh: e29f99685eb9c0f3
+/deepseek-bot/remote-access:
+  en: cf0dfbe22a0da05e
+  zh: 4f3e209f6cb9e443
+/deepseek-bot/current-limitations:
+  en: 3765cc05ab6c9a62
+  zh: 642b45e091d696b5
